@@ -3,18 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TutorialComponent } from './tutorial/tutorial.component';
-import { AnotherComponent } from './another/another.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { MaterialModule } from './material.module';
+import { IntroComponent } from './intro/intro.component';
+import { ExampleOneComponent } from './example-one/example-one.component';
+import { ExampleTwoComponent } from './example-two/example-two.component';
+
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TutorialComponent,
-    AnotherComponent
+    IntroComponent,
+    ExampleOneComponent,
+    ExampleTwoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
