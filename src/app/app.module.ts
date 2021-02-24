@@ -9,6 +9,8 @@ import { IntroComponent } from './intro/intro.component';
 import { ExampleOneComponent } from './example-one/example-one.component';
 import { ExampleTwoComponent } from './example-two/example-two.component';
 
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +22,17 @@ import { ExampleTwoComponent } from './example-two/example-two.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HighlightModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js')
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

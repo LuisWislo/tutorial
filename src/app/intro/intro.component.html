@@ -1,9 +1,16 @@
 <div class="main">
     <div class="titles">
-        <h1>WASM Python Tutorial</h1>
+        <h1><b>WASM Python Tutorial</b></h1>
         <h3>By Carlos Lopez & Luis Wilson</h3>
     </div>
-
+    <div align="right">
+        <a mat-icon-button href="https://github.com/iodide-project/pyodide/releases/" target="_blank">
+            Pyodide Releases
+            <mat-icon>open_in_new</mat-icon>
+        </a>
+    </div>
+    
+    
     <div style="padding-top: 30px;">
         In this tutotial, we are going to show you how to use Python on the web!<br><br>
         But not with Django or some fancy server. But with the wonder that is WebAssembler 
@@ -16,9 +23,28 @@
         <mat-card-content>
             In order to use Pyodide, first we have to download the latest version tarball from the "latest releases" in the Pyodide repository.
             Once downloaded, we have to extract the components into a local 'pyodide_local' folder and create an 'index.html' file where we will put our code.
+            <br><br>
+            <span><b>Index.html Template:</b></span>
+            <pre>
+                <code [highlight]="code">
+                </code>
+            </pre>
+            Resulting page:
+            <br><br>
+            <img src="../../assets/test.png">
         </mat-card-content>
     </mat-card>
-    
+
+    <div style="padding-top: 30px;">
+        Check out these two awsome examples:
+    </div>
+    <br>
+    <mat-grid-list cols="2" rowHeight="70px">
+        <mat-grid-tile routerLink="/example-one"> Example 1 </mat-grid-tile>
+        <mat-grid-tile routerLink="/example-two"> Example 2 </mat-grid-tile>
+    </mat-grid-list>
+
+
     
 
 </div>
