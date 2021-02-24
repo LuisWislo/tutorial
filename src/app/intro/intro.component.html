@@ -14,14 +14,16 @@
     <div style="padding-top: 30px;">
         In this tutotial, we are going to show you how to use Python on the web!<br><br>
         But not with Django or some fancy server. But with the wonder that is WebAssembler 
-        (through the amazing prohect Pyodide)! Don't worry. We will show you how to install Pyodide, and 3 usage examples of Python on the web.
+        (through the amazing prohect Pyodide)! Don't worry. We will show you how to install Pyodide, and 2 usage examples of Python on the web.
     </div>
     <br><br>
     <mat-card>
         <mat-card-title>Installation</mat-card-title>
         <br>
         <mat-card-content>
-            In order to use Pyodide, first we have to download the latest version tarball from the "latest releases" in the Pyodide repository.
+            In order to use Pyodide, first we have to download the latest version tarball from the 
+            <a href="https://github.com/iodide-project/pyodide/releases/">"latest releases"</a>
+            in the Pyodide repository.
             Once downloaded, we have to extract the components into a local 'pyodide_local' folder and create an 'index.html' file where we will put our code.
             <br><br>
             <span><b>Index.html Template:</b></span>
@@ -29,14 +31,45 @@
                 <code [highlight]="code">
                 </code>
             </pre>
-            Resulting page:
+        </mat-card-content>
+    </mat-card>
+    
+    <br><br>
+
+    <mat-card>
+        <mat-card-title>Usage</mat-card-title>
+        <br>
+        <mat-card-content>
+            Once the contents of Pyodide are in place, the usage is really simple.
+            As it can be seen in the html template up above, the only things you need to get it working are three chunks of code:
             <br><br>
-            <img src="../../assets/test.png">
+            <span><b>1) The address of the page you're working on:</b></span>
+            Here, "window.languagePluginUrl" will set the address you indicate.
+
+            <pre>
+                <code [highlight]="code2"></code>
+            </pre>
+
+            <span><b>2) A script tag with the "pyodide.js" file as source:</b></span>
+            "pyodide.js" can be found in the files you extracted from pyodide.
+
+            <pre>
+                <code [highlight]="code3"></code>
+            </pre>
+
+            <span><b>3) The Pyodide Plugin Loader:</b></span>
+            All the Python code you wish to execute must be located in this function, inside a Pyodide wrapper function.
+
+            <pre>
+                <code [highlight]="code4"></code>
+            </pre>
+
+            There are several functions built in Pyodide that allow the code to run, but this is the default one.
         </mat-card-content>
     </mat-card>
 
     <div style="padding-top: 30px;">
-        Check out these two awsome examples:
+        Now, check out these two awsome examples of Pyodide in action:
     </div>
     <br>
     <mat-grid-list cols="2" rowHeight="70px">

@@ -1,1 +1,55 @@
-<p>example-two works!</p>
+<div class="main">
+    <h1><b>Generating HTML code directly from Python</b></h1>
+    <h3>Example #2</h3>
+
+    <div>
+        For our second example, we are going to do something ambitious. We are going to map a plot with several Python libraries with the help of Pyodide!
+        <br>
+        First, we have to import the libraries that we are going to use (such as numpy and matplotlib).
+        In order to do that, we have to declare the imports in Python:
+    </div>
+
+    <pre><code [highlight]="code"></code></pre>
+
+    <div>
+        and then execute the code:
+    </div>
+
+    <pre><code [highlight]="code2"></code></pre>
+
+    <div>
+        As you can see, we are wrapping the imports in a different Pyodide wrapper.
+        This time, in order for the imports to work properly we have to run the Python code inside an asynchronous function.
+    </div>
+    <br>
+    <div>
+        Once we imported our libraries, we have to write our Python code, like in the previous example: 
+    </div>
+
+    <pre><code [highlight]="code3"></code></pre>
+    
+    <div>
+        This code generates the plot, its value fields and the 'plot' button, as well as append all of these components into our html page.
+    </div>
+
+    <div>
+        Finally, we just have to run the code:
+    </div>
+
+    <pre><code [highlight]="code4"></code></pre>
+
+    <div>
+        and voilà!
+    </div>
+
+    <br><br>
+
+    Resulting page:
+    <br><br>
+    <img src="../../assets/two.png">
+    <br><br><br>
+    <mat-grid-list cols="2" rowHeight="70px">
+        <mat-grid-tile routerLink="/example-one"> Example 1 </mat-grid-tile>
+        <mat-grid-tile routerLink="/"> Back to Intro </mat-grid-tile>
+    </mat-grid-list>
+</div>

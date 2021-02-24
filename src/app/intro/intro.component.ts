@@ -25,6 +25,18 @@ export class IntroComponent implements OnInit {
     </script>
   </body>`;
 
+  code2 : string = `<script type="text/javascript">
+      window.languagePluginUrl = 'http://localhost:8000/';
+  </script>`;
+
+  code3 : string = `<script src="pyodide.js"></script>`;
+
+  code4 : string = `<script type="text/javascript">
+    languagePluginLoader.then(function () {
+        console.log(pyodide.runPython('print("Hello World")'));
+    });
+  </script>`;
+
   constructor() { }
 
   ngOnInit(): void {
